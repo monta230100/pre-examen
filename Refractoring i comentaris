@@ -1,0 +1,24 @@
+import java.io.*;
+
+ 
+public class examen{
+  public static void main(String[] args) throws IOException {
+	  BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+      
+       char [] palabra=new char[15]; /*@deprecated Array on s'afegirà la paraula de màxim 15 lletres.*/
+        int i,contador=0; /*@deprecated Convertim i i contador en integers.*/
+        
+        System.out.printf("Diguem una paraula?\n"); /*@deprecated Demanem que ens digui una paraula.*/
+        
+        palabra=reader.readLine().toCharArray(); /*@deprecated Incerim la paraula a l'array palabra i la convertim en un char.*/
+        
+        for (i=0;palabra.length>i-2;i++){ /*@deprecated Llegim lletra per lletra la paraula de l'array.*/
+            if (palabra[i]=='a' || palabra[i]=='e' || palabra[i]=='i' || palabra[i]=='o' || palabra[i]=='u'){ /*@deprecated Llegim la paraula comprovant si té una de les lletres indicades.*/
+                contador++; /*@deprecated Si hi ha una de les lletres indicades, s'afegiran al contador de volcals que té la paraula.*/
+                if (contador>=3){   /*@deprecated Quan tingui 3 o més lletres indicades.*/
+                    System.out.printf("El %s conte %d a,e,i,o o u.",palabra,contador); /*@deprecated Imprimeixi la paraula i les vocals que té.*/
+                    break;/*@deprecated Acabem el programa.*/
+                }
+            }
+        }
+}}
