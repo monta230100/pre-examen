@@ -1,0 +1,41 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class examenTest {
+
+	@Test
+	public void Menor_a_3() {
+		String word = "Pa";
+		char [] palabra = word.toCharArray();
+		int contador2 = 1;
+		assertEquals("Error en filtro vocales!", 1, contador2.add(contador).getNumber());
+	}
+	@Test
+	public void Major_a_3() {
+		String word = "Anaximandre";
+		char [] palabra = word.toCharArray();
+		int contador2 = 3;
+		assertEquals("Error en filtro vocales!", 3, contador2.add(contador).getNumber());
+	}
+	@Test
+	public void Major_a_15() {
+		String word = "Supercalifragilisticesplialidos";
+		char [] palabra2 = word.toCharArray();
+		assertEquals("Error en cantidad de letras de array.", palabra2.add(palabra).getNumber());
+	}
+	@Test
+	public void No_Vocals() {
+		String word = "rrrrr";
+		char [] palabra = word.toCharArray();
+		int contador2 = 0;
+		assertEquals("No hay vocales", 0, contador2.add(contador).getNumber());
+	}
+	@Test
+	public void Res() {
+		String word = "";
+		char [] palabra = word.toCharArray();
+		assertEquals("Error No has escrito nada.", 0, palabra.add("").getNumber());
+	}
+
+}
